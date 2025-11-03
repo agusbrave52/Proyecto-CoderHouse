@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+}
+
+
+/* estilos de nav */
+header nav {
+    background: linear-gradient(to bottom, #fdedcf, #f5d49a);
+}
+
+header nav div a {
+    text-decoration: none;
+    color: #313131;
+}
+
+#buscadorLG,
+#buscadorSM {
+    background-color: #ffeed1;
+}
+
+.nav-item {
+    font-weight: bold;
+}
+
+
+
+/* separadores */
+header nav div ul span {
+    margin: 0 10px;
+    color: #77531d;
+    font-weight: bold;
+}
+
+
+/* estilos de categorias index*/
+main .categorias h2,
+main .destacados h2 {
+    color: #77531d;
+    background-color: #fce2b2;
+    border-top: #c49530 solid 2px;
+    border-bottom: #c49530 solid 2px;
+    padding: 10px;
+}
+
+
+/* estilos de destacados index*/
+
+main .destacados div p {
+    color: #504d4a;
+}
+
+main .destacados .row div .card .precio {
+    color: #278d1a;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    text-shadow: #d1ffc4 0px 0px 3px;
+}
+
+main .destacados .row .col p {
+    padding-top: 10px;
+}
+
+/* estilos de footer index */
+footer {
+    background-color: #d1c0a3;
+    color: #42321b;
+}
+
+.footer-start {
+    text-align: start;
+}
+
+.footer-start a {
+    color: #42321b;
+}
+footer section p{
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer-centrado div img {
+    width: 40px;
+    margin: 0 5px;
+}
+
+.footer-centrado a {
+    text-decoration: none;
+    color: #42321b;
+}
+
+.footer-centrado a i.bi-facebook {
+    color: #3b5998;
+}
+
+.footer-centrado a i.bi-instagram {
+    color: #c32aa3;
+}
+
+
+
+
+/* estilos generales */
+.precio {
+    color: #278d1a;
+}
+
+.talles-adultos,
+.talles-kids {
+    list-style: none;
+}
+
+
+/* estilos de productos */
+main section ul {
+    list-style: none;
+}
+
+.productos ul li {
+    border: solid 1px #999792;
+}
+
+/* estilos de tiendas */
+
+main section ul li {
+    border: solid 1px #999792;
+}
+
+/* estilos responsive */
+@media (max-width: 768px) {
+    header nav div ul span {
+        display: none;
+    }
+
+    #buscadorLG {
+        display: none;
+    }
+
+    .footer-start {
+        text-align: center;
+    }
+
+    .footer-start p {
+        margin-top: 30px;
+    }
+}
