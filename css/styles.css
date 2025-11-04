@@ -36,8 +36,8 @@ header nav div ul span {
 
 
 /* estilos de categorias index*/
-main .categorias h2,
-main .destacados h2 {
+.categorias h2,
+.destacados h2 {
     color: #77531d;
     background-color: #fce2b2;
     border-top: #c49530 solid 2px;
@@ -48,11 +48,11 @@ main .destacados h2 {
 
 /* estilos de destacados index*/
 
-main .destacados div p {
+.destacados div p {
     color: #504d4a;
 }
 
-main .destacados .row div .card .precio {
+.card .precio {
     color: #278d1a;
     position: absolute;
     bottom: 0px;
@@ -60,7 +60,7 @@ main .destacados .row div .card .precio {
     text-shadow: #d1ffc4 0px 0px 3px;
 }
 
-main .destacados .row .col p {
+.destacados .row .col p {
     padding-top: 10px;
 }
 
@@ -114,20 +114,119 @@ footer section p{
 }
 
 
+
+
+
+
 /* estilos de productos */
-main section ul {
+.filtros ul{
     list-style: none;
 }
 
-.productos ul li {
-    border: solid 1px #999792;
+.filtros{
+    background-color: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 250px;
 }
+.categorias-lista{
+    list-style: none;
+}
+.categorias-lista li{
+    transition: color 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.categorias-lista li:hover{
+    color: #eeeeee;
+}
+.talles-adultos, .talles-kids{
+    cursor: default;
+}
+.talles-adultos li, .talles-kids li{
+    transition: color 0.2s ease;
+    border: none;
+}
+.talles-adultos li:hover, .talles-kids li:hover{
+    cursor: pointer;
+    color: #ffffff;
+}
+.producto{
+    transition: transform 0.4s ease;
+}
+
+.producto:hover{
+    transform: scale(1.05);
+}
+
+
+/* filtros */
+aside.filtros{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 250px;
+}
+
+.filtros-collapse{
+    background-color: rgb(141, 141, 141);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 15px;
+}
+.filtros-collapse div input{
+    background-color: antiquewhite;
+}
+
+
+
+/* mapa */
+.mapa{
+    width: 90%;
+    height: 600px;
+    border: solid 3px #8a8372;
+}
+
+
+
+
+
+
+
 
 /* estilos de tiendas */
 
 main section ul li {
     border: solid 1px #999792;
 }
+.contenedor div div section img{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+.contenedor div div{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor div div section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-tienda{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.caja{
+    position: relative;
+}
+
 
 /* estilos responsive */
 @media (max-width: 768px) {
@@ -146,4 +245,17 @@ main section ul li {
     .footer-start p {
         margin-top: 30px;
     }
+    aside.filtros{
+        display: none;
+    }
+}
+
+
+/* estilos de estrellas */
+.rating {
+  display: inline-block;
+  font-size: 30px;
+}
+.stars{
+    color: gold;
 }
