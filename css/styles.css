@@ -27,12 +27,18 @@ header nav div a {
 
 
 
+
+
+
 /* separadores */
 header nav div ul span {
     margin: 0 10px;
     color: #77531d;
     font-weight: bold;
 }
+
+
+
 
 
 /* estilos de categorias index*/
@@ -46,8 +52,12 @@ header nav div ul span {
 }
 
 
-/* estilos de destacados index*/
 
+
+
+
+
+/* estilos de destacados index*/
 .destacados div p {
     color: #504d4a;
 }
@@ -63,6 +73,11 @@ header nav div ul span {
 .destacados .row .col p {
     padding-top: 10px;
 }
+
+
+
+
+
 
 /* estilos de footer index */
 footer {
@@ -99,6 +114,7 @@ footer section p{
 .footer-centrado a i.bi-instagram {
     color: #c32aa3;
 }
+
 
 
 
@@ -162,6 +178,8 @@ footer section p{
 }
 
 
+
+
 /* filtros */
 aside.filtros{
     display: flex;
@@ -179,6 +197,10 @@ aside.filtros{
 .filtros-collapse div input{
     background-color: antiquewhite;
 }
+
+
+
+
 
 
 
@@ -217,6 +239,9 @@ main section ul li {
     align-items: center;
     gap: 10px;
 }
+.sucursales, .mapa-sucursales{
+    width: 50%;
+}
 
 .titulo-tienda{
     position: absolute;
@@ -247,6 +272,27 @@ main section ul li {
     }
     aside.filtros{
         display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sucursales, .mapa-sucursales{
+        width: 100%;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .mapa{
+        height: 400px;
+    }
+    .caja{
+        flex-direction: column;
+    }
+    .titulo-tienda{
+        position: static;
     }
 }
 
