@@ -1,307 +1,246 @@
+@media (max-width: 768px) {
+  header nav div ul span {
+    display: none;
+  }
+  #buscadorLG {
+    display: none;
+  }
+  .footer-start {
+    text-align: center;
+  }
+  .footer-start p {
+    margin-top: 30px;
+  }
+  aside.filtros {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .sucursales,
+  .mapa-sucursales {
+    width: 100%;
+  }
+  .contenedor {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .mapa {
+    height: 400px;
+  }
+  .caja {
+    flex-direction: column;
+  }
+  .titulo-tienda {
+    position: static;
+  }
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Arimo", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
 }
 
-
-/* estilos de nav */
-header nav {
-    background: linear-gradient(to bottom, #fdedcf, #f5d49a);
+.categorias h2, .destacados h2 {
+  color: #77531d;
+  background-color: #fce2b2;
+  border-top: #c49530 solid 2px;
+  border-bottom: #c49530 solid 2px;
+  padding: 10px;
 }
 
 header nav div a {
-    text-decoration: none;
-    color: #313131;
+  text-decoration: none;
+  color: #313131;
+}
+
+header nav {
+  background: linear-gradient(to bottom, #fdedcf, #f5d49a);
+}
+header nav div ul span {
+  margin: 0 10px;
+  color: #77531d;
+  font-weight: bold;
 }
 
 #buscadorLG,
 #buscadorSM {
-    background-color: #ffeed1;
+  background-color: #ffeed1;
 }
 
 .nav-item {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-
-
-
-
-
-/* separadores */
-header nav div ul span {
-    margin: 0 10px;
-    color: #77531d;
-    font-weight: bold;
-}
-
-
-
-
-
-/* estilos de categorias index*/
-.categorias h2,
-.destacados h2 {
-    color: #77531d;
-    background-color: #fce2b2;
-    border-top: #c49530 solid 2px;
-    border-bottom: #c49530 solid 2px;
-    padding: 10px;
-}
-
-
-
-
-
-
-
-/* estilos de destacados index*/
 .destacados div p {
-    color: #504d4a;
+  color: #504d4a;
+}
+.destacados .row .col p {
+  padding-top: 10px;
 }
 
 .card .precio {
-    color: #278d1a;
-    position: absolute;
-    bottom: 0px;
-    left: 10px;
-    text-shadow: #d1ffc4 0px 0px 3px;
+  color: #278d1a;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  text-shadow: #d1ffc4 0px 0px 3px;
 }
 
-.destacados .row .col p {
-    padding-top: 10px;
-}
-
-
-
-
-
-
-/* estilos de footer index */
-footer {
-    background-color: #d1c0a3;
-    color: #42321b;
-}
-
-.footer-start {
-    text-align: start;
-}
-
-.footer-start a {
-    color: #42321b;
-}
-footer section p{
-    font-size: large;
-    font-weight: bold;
-}
-
-.footer-centrado div img {
-    width: 40px;
-    margin: 0 5px;
-}
-
-.footer-centrado a {
-    text-decoration: none;
-    color: #42321b;
-}
-
-.footer-centrado a i.bi-facebook {
-    color: #3b5998;
-}
-
-.footer-centrado a i.bi-instagram {
-    color: #c32aa3;
-}
-
-
-
-
-
-/* estilos generales */
-.precio {
-    color: #278d1a;
-}
-
-.talles-adultos,
-.talles-kids {
-    list-style: none;
-}
-
-
-
-
-
-
-/* estilos de productos */
-.filtros ul{
-    list-style: none;
-}
-
-.filtros{
-    background-color: rgb(202, 202, 202);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 250px;
-}
-.categorias-lista{
-    list-style: none;
-}
-.categorias-lista li{
-    transition: color 0.2s ease;
-    cursor: pointer;
-    border: none;
-}
-
-.categorias-lista li:hover{
-    color: #eeeeee;
-}
-.talles-adultos, .talles-kids{
-    cursor: default;
-}
-.talles-adultos li, .talles-kids li{
-    transition: color 0.2s ease;
-    border: none;
-}
-.talles-adultos li:hover, .talles-kids li:hover{
-    cursor: pointer;
-    color: #ffffff;
-}
-.producto{
-    transition: transform 0.4s ease;
-}
-
-.producto:hover{
-    transform: scale(1.05);
-}
-
-
-
-
-/* filtros */
-aside.filtros{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 250px;
-}
-
-.filtros-collapse{
-    background-color: rgb(141, 141, 141);
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 15px;
-}
-.filtros-collapse div input{
-    background-color: antiquewhite;
-}
-
-
-
-
-
-
-
-/* mapa */
-.mapa{
-    width: 90%;
-    height: 600px;
-    border: solid 3px #8a8372;
-}
-
-
-
-
-
-
-
-
-/* estilos de tiendas */
-
-main section ul li {
-    border: solid 1px #999792;
-}
-.contenedor div div section img{
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-}
-.contenedor div div{
-    display: flex;
-    align-items: center;
-}
-
-.contenedor div div section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-.sucursales, .mapa-sucursales{
-    width: 50%;
-}
-
-.titulo-tienda{
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
-.caja{
-    position: relative;
-}
-
-
-/* estilos responsive */
-@media (max-width: 768px) {
-    header nav div ul span {
-        display: none;
-    }
-
-    #buscadorLG {
-        display: none;
-    }
-
-    .footer-start {
-        text-align: center;
-    }
-
-    .footer-start p {
-        margin-top: 30px;
-    }
-    aside.filtros{
-        display: none;
-    }
-}
-
-@media (max-width: 1200px) {
-    .sucursales, .mapa-sucursales{
-        width: 100%;
-    }
-    .contenedor{
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 576px) {
-    .mapa{
-        height: 400px;
-    }
-    .caja{
-        flex-direction: column;
-    }
-    .titulo-tienda{
-        position: static;
-    }
-}
-
-
-/* estilos de estrellas */
 .rating {
   display: inline-block;
   font-size: 30px;
 }
-.stars{
-    color: gold;
+
+.stars {
+  color: gold;
 }
+
+footer {
+  background-color: #d1c0a3;
+  color: #42321b;
+}
+footer section p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.footer-start {
+  text-align: start;
+}
+.footer-start a {
+  color: #42321b;
+}
+
+.footer-centrado div img {
+  width: 40px;
+  margin: 0 5px;
+}
+.footer-centrado a {
+  text-decoration: none;
+  color: #42321b;
+}
+.footer-centrado a i.bi-facebook {
+  color: #3b5998;
+}
+.footer-centrado a i.bi-instagram {
+  color: #c32aa3;
+}
+
+.precio {
+  color: #278d1a;
+}
+
+.talles-adultos,
+.talles-kids {
+  list-style: none;
+}
+
+.producto {
+  transition: transform 0.4s ease;
+}
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.talles-adultos,
+.talles-kids {
+  cursor: default;
+}
+.talles-adultos li,
+.talles-kids li {
+  transition: color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+.talles-adultos li:hover,
+.talles-kids li:hover {
+  color: #ffffff;
+}
+
+.filtros {
+  background-color: rgb(202, 202, 202);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 250px;
+}
+.filtros ul {
+  list-style: none;
+}
+
+.filtros-collapse {
+  background-color: rgb(141, 141, 141);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 15px;
+}
+.filtros-collapse div input {
+  background-color: antiquewhite;
+}
+
+aside.filtros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 250px;
+}
+
+.mapa {
+  width: 90%;
+  height: 600px;
+  border: solid 3px #8a8372;
+}
+
+main section ul li {
+  border: solid 1px #999792;
+}
+
+.contenedor div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contenedor div div section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contenedor div div section img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.sucursales,
+.mapa-sucursales {
+  width: 50%;
+}
+
+.titulo-tienda {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.caja {
+  position: relative;
+}
+
+.categorias-lista {
+  list-style: none;
+}
+.categorias-lista li {
+  transition: color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+.categorias-lista li:hover {
+  color: #eeeeee;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,55 @@
+@use '../utilities/variables' as *;
+
+
+// Tablet 
+@media (max-width: 768px) {
+    // Ocultar separadores del nav
+    header nav div ul span {
+        display: none;
+    }
+    // Ocultar buscador grande
+    #buscadorLG {
+        display: none;
+    }
+
+    // Footer centrado
+    .footer-start {
+        text-align: center;
+
+        p {
+            margin-top: 30px;
+        }
+    }
+
+    // Ocultar filtros laterales
+    aside.filtros {
+        display: none;
+    }
+}
+
+// Escritorio
+@media (max-width: 1200px) {
+    .sucursales,
+    .mapa-sucursales {
+        width: 100%;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+}
+
+// Mobile 
+@media (max-width: 576px) {
+    .mapa {
+        height: $map-height-mobile;
+    }
+
+    .caja {
+        flex-direction: column;
+    }
+
+    .titulo-tienda {
+        position: static;
+    }
+}

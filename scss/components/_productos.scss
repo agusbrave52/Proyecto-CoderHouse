@@ -1,0 +1,28 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+// Estilos generales de productos
+.precio {
+    color: $price-color;
+}
+
+.talles-adultos,
+.talles-kids {
+    list-style: none;
+}
+
+// Sección de productos
+.producto {
+    @include hover-scale(1.05, $transition-duration-long);
+}
+
+
+// Talles
+.talles-adultos,
+.talles-kids {
+    cursor: default;
+
+    li {
+        @include hover-color(#ffffff, $transition-duration);
+    }
+}

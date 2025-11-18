@@ -1,0 +1,42 @@
+@use '../utilities/variables' as *;
+
+// Estilos del footer
+footer {
+    background-color: $background-footer;
+    color: $text-footer;
+
+    section p {
+        font-size: large;
+        font-weight: bold;
+    }
+}
+
+// Alineación del footer
+.footer-start {
+    text-align: start;
+
+    a {
+        color: $text-footer;
+    }
+}
+
+// Footer centrado con redes sociales
+.footer-centrado {
+    div img {
+        width: $icon-size;
+        margin: 0 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-footer;
+
+        i.bi-facebook {
+            color: $facebook-color;
+        }
+
+        i.bi-instagram {
+            color: $instagram-color;
+        }
+    }
+}

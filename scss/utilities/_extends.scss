@@ -1,0 +1,16 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+//extend de titulos en las secciones
+%titulos-section {
+    color: $primary-color;
+    background-color: $secondary-color;
+    @include borde-solido(2px, $secondary-dark);
+    padding: 10px;
+}
+
+//extend para links sin estilo
+%link-normal {
+    text-decoration: none;
+    color: $text-color;
+}

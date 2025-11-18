@@ -1,0 +1,38 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+
+// Estilos de productos destacados
+.destacados {
+    h2 {
+        @extend %titulos-section;
+    }
+
+    div p {
+        color: $text-secondary;
+    }
+
+    .row .col p {
+        padding-top: 10px;
+    }
+}
+
+// Card de productos
+.card {
+    .precio {
+        color: $price-color;
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        text-shadow: $price-shadow 0px 0px 3px;
+    }
+}
+
+// Estilos de estrellas
+.rating {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.stars {
+    color: $stars-color;
+}

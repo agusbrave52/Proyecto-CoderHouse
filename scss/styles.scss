@@ -1,0 +1,35 @@
+//Responsive
+@use 'base/responsive' as *;
+//Base
+@use 'base/reset' as *;
+
+//Utilities
+@use 'utilities/extends' as *;
+@use 'utilities/variables' as *;
+@use 'utilities/mixins' as *;
+
+//Components
+@use 'components/nav' as *;
+@use 'components/destacados' as *;
+@use 'components/footer' as *;
+@use 'components/productos' as *;
+@use 'components/filtros' as *;
+@use 'components/tiendas' as *;
+
+
+// Estilos de categorías
+.categorias {
+    h2 {
+        @extend %titulos-section;
+    }
+}
+
+// Lista de categorías de productos
+.categorias-lista {
+    list-style: none;
+
+    li {
+        @include hover-color(#eeeeee, $transition-duration);
+    }
+}
+

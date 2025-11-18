@@ -1,0 +1,33 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+
+// Estilos del navegador y header
+header {
+    nav {
+        background: linear-gradient(to bottom, $primary-light, $primary-medium);
+
+        div {
+            a {
+                @extend %link-normal;
+            }
+
+            // Separadores entre items del nav
+            ul span {
+                margin: 0 10px;
+                color: $primary-color;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// Buscadores
+#buscadorLG,
+#buscadorSM {
+    background-color: $background-light;
+}
+
+// Items de navegación
+.nav-item {
+    font-weight: bold;
+}

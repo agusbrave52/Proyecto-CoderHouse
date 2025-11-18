@@ -1,0 +1,47 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+// Estilos del mapa
+.mapa {
+    width: 90%;
+    height: $map-height;
+    border: solid 3px $border-dark;
+}
+
+// Estilos de tiendas
+main section ul li {
+    border: solid 1px $border-color;
+}
+
+// Contenedor de tiendas
+.contenedor {
+    div div {
+        @include centrar-flex(row);
+        section {
+            @include centrar-flex(column);
+            gap: 10px;
+            img {
+                width: $image-tienda-width;
+                height: $image-tienda-height;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// Sucursales y mapa
+.sucursales,
+.mapa-sucursales {
+    width: 50%;
+}
+
+// Título de la tienda
+.titulo-tienda {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.caja {
+    position: relative;
+}

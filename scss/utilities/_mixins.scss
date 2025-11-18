@@ -1,0 +1,32 @@
+// Mixin para bordes sólidos
+@mixin borde-solido($width: 2px, $color: $secondary-dark) {
+    border-top: $color solid $width;
+    border-bottom: $color solid $width;
+}
+
+// Mixin para centrar elementos con flexbox
+@mixin centrar-flex($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+// Mixin para hover con escala
+@mixin hover-scale($scale: 1.05, $duration: 0.4s) {
+    transition: transform $duration ease;
+    
+    &:hover {
+        transform: scale($scale);
+    }
+}
+
+// Mixin para hover de color
+@mixin hover-color($color: #eeeeee, $duration: 0.2s) {
+    transition: color $duration ease;
+    cursor: pointer;
+    border: none;
+    
+    &:hover {
+        color: $color;
+    }
+}

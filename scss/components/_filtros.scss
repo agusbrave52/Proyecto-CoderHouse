@@ -1,0 +1,33 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+// Estilos de filtros
+.filtros {
+    background-color: $background-filtros;
+    @include centrar-flex(column);
+    padding: 10px;
+    width: $max-width-filtros;
+
+    ul {
+        list-style: none;
+    }
+}
+
+// Filtros con collapse
+.filtros-collapse {
+    background-color: $background-filtros-dark;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 15px;
+
+    div input {
+        background-color: antiquewhite;
+    }
+}
+
+// Aside de filtros
+aside.filtros {
+    @include centrar-flex(column);
+    padding: 10px;
+    width: $max-width-filtros;
+}
