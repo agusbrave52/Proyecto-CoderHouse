@@ -1,6 +1,18 @@
 @use '../utilities/variables' as *;
 
 
+// Escritorio
+@media (max-width: 1200px) {
+    .sucursales,
+    .mapa-sucursales {
+        width: 100%;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+}
+
 // Tablet 
 @media (max-width: 768px) {
     // Ocultar separadores del nav
@@ -27,18 +39,6 @@
     }
 }
 
-// Escritorio
-@media (max-width: 1200px) {
-    .sucursales,
-    .mapa-sucursales {
-        width: 100%;
-    }
-
-    .contenedor {
-        flex-direction: column;
-    }
-}
-
 // Mobile 
 @media (max-width: 576px) {
     .mapa {
@@ -47,6 +47,7 @@
 
     .caja {
         flex-direction: column;
+        
     }
 
     .titulo-tienda {

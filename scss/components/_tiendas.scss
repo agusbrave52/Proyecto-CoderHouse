@@ -17,9 +17,11 @@ main section ul li {
 .contenedor {
     div div {
         @include centrar-flex(row);
+
         section {
             @include centrar-flex(column);
             gap: 10px;
+            
             img {
                 width: $image-tienda-width;
                 height: $image-tienda-height;
