@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
   .sucursales,
   .mapa-sucursales {
-    width: 100%;
+    width: 100% !important;
   }
   .contenedor {
     flex-direction: column;
