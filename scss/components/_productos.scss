@@ -16,6 +16,15 @@
     @include hover-scale(1.05, $transition-duration-long);
 }
 
+// Lista de categorías de productos
+.categorias-lista {
+    list-style: none;
+
+    li {
+        @include hover-color(#eeeeee, $transition-duration);
+    }
+}
+
 
 // Talles
 .talles-adultos,

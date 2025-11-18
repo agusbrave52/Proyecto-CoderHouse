@@ -1,40 +1,3 @@
-@media (max-width: 1200px) {
-  .sucursales,
-  .mapa-sucursales {
-    width: 100% !important;
-  }
-  .contenedor {
-    flex-direction: column;
-  }
-}
-@media (max-width: 768px) {
-  header nav div ul span {
-    display: none;
-  }
-  #buscadorLG {
-    display: none;
-  }
-  .footer-start {
-    text-align: center;
-  }
-  .footer-start p {
-    margin-top: 30px;
-  }
-  aside.filtros {
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-  .mapa {
-    height: 400px;
-  }
-  .caja {
-    flex-direction: column;
-  }
-  .titulo-tienda {
-    position: static;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +34,18 @@ header nav div ul span {
 
 .nav-item {
   font-weight: bold;
+}
+
+.btn-productos:hover {
+  animation: mover 0.3s ease-in-out infinite alternate;
+}
+@keyframes mover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }
 
 .destacados div p {
@@ -144,6 +119,18 @@ footer section p {
   transform: scale(1.05);
 }
 
+.categorias-lista {
+  list-style: none;
+}
+.categorias-lista li {
+  transition: color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+.categorias-lista li:hover {
+  color: #eeeeee;
+}
+
 .talles-adultos,
 .talles-kids {
   cursor: default;
@@ -157,6 +144,49 @@ footer section p {
 .talles-adultos li:hover,
 .talles-kids li:hover {
   color: #ffffff;
+}
+
+.mapa {
+  width: 90%;
+  height: 600px;
+  border: solid 3px #8a8372;
+}
+
+main section ul li {
+  border: solid 1px #999792;
+}
+
+.contenedor div div section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contenedor div div section img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caja {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sucursales,
+.mapa-sucursales {
+  width: 50%;
+}
+
+.titulo-tienda {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.caja {
+  position: relative;
 }
 
 .filtros {
@@ -189,58 +219,42 @@ aside.filtros {
   width: 250px;
 }
 
-.mapa {
-  width: 90%;
-  height: 600px;
-  border: solid 3px #8a8372;
+@media (max-width: 1200px) {
+  .sucursales,
+  .mapa-sucursales {
+    width: 100%;
+  }
+  .contenedor {
+    flex-direction: column;
+  }
 }
-
-main section ul li {
-  border: solid 1px #999792;
+@media (max-width: 768px) {
+  header nav div ul span {
+    display: none;
+  }
+  #buscadorLG {
+    display: none;
+  }
+  .footer-start {
+    text-align: center;
+  }
+  .footer-start p {
+    margin-top: 30px;
+  }
+  aside.filtros {
+    display: none;
+  }
 }
-
-.contenedor div div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.contenedor div div section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.contenedor div div section img {
-  width: 250px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.sucursales,
-.mapa-sucursales {
-  width: 50%;
-}
-
-.titulo-tienda {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-.caja {
-  position: relative;
-}
-
-.categorias-lista {
-  list-style: none;
-}
-.categorias-lista li {
-  transition: color 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-.categorias-lista li:hover {
-  color: #eeeeee;
+@media (max-width: 576px) {
+  .mapa {
+    height: 400px;
+  }
+  .caja {
+    flex-direction: column;
+  }
+  .titulo-tienda {
+    position: static;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

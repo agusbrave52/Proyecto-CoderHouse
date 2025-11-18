@@ -1,5 +1,4 @@
-//Responsive
-@use 'base/responsive' as *;
+
 //Base
 @use 'base/reset' as *;
 
@@ -13,9 +12,11 @@
 @use 'components/destacados' as *;
 @use 'components/footer' as *;
 @use 'components/productos' as *;
-@use 'components/filtros' as *;
 @use 'components/tiendas' as *;
+@use 'components/filtros' as *;
 
+//Responsive
+@use 'base/responsive' as *;
 
 // Estilos de categorías
 .categorias {
@@ -24,12 +25,4 @@
     }
 }
 
-// Lista de categorías de productos
-.categorias-lista {
-    list-style: none;
-
-    li {
-        @include hover-color(#eeeeee, $transition-duration);
-    }
-}
 

@@ -15,20 +15,19 @@ main section ul li {
 
 // Contenedor de tiendas
 .contenedor {
-    div div {
-        @include centrar-flex(row);
+    div div section {
+        @include centrar-flex(column);
+        gap: 10px;
 
-        section {
-            @include centrar-flex(column);
-            gap: 10px;
-            
-            img {
-                width: $image-tienda-width;
-                height: $image-tienda-height;
-                object-fit: cover;
-            }
+        img {
+            width: $image-tienda-width;
+            height: $image-tienda-height;
+            object-fit: cover;
         }
     }
+}
+.caja {
+        @include centrar-flex(row);
 }
 
 // Sucursales y mapa

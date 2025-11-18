@@ -5,7 +5,7 @@
 @media (max-width: 1200px) {
     .sucursales,
     .mapa-sucursales {
-        width: 100% !important;
+        width: 100%;
     }
 
     .contenedor {
@@ -47,7 +47,6 @@
 
     .caja {
         flex-direction: column;
-        
     }
 
     .titulo-tienda {

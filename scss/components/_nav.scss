@@ -1,5 +1,6 @@
 @use '../utilities/variables' as *;
 @use '../utilities/extends' as *;
+@use '../utilities/mixins' as *;
 
 // Estilos del navegador y header
 header {
@@ -30,4 +31,7 @@ header {
 // Items de navegación
 .nav-item {
     font-weight: bold;
+}
+.btn-productos:hover{
+    @include hover-bag(0.3s, -10px);
 }
