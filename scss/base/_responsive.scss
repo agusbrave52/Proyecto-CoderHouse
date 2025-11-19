@@ -1,8 +1,8 @@
 @use '../utilities/variables' as *;
 
-
 // Escritorio
 @media (max-width: 1200px) {
+
     .sucursales,
     .mapa-sucursales {
         width: 100%;
@@ -11,14 +11,40 @@
     .contenedor {
         flex-direction: column;
     }
+    .productos-lista {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (max-width: 992px) {
+    .filtros {
+        display: none;
+    }
+
+    .productos {
+        width: 100%;
+
+        .filtros-dropdown {
+            button {
+                display: flex;
+            }
+        }
+    }
+    .productos-lista {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 
 // Tablet 
 @media (max-width: 768px) {
+
     // Ocultar separadores del nav
     header nav div ul span {
         display: none;
     }
+
     // Ocultar buscador grande
     #buscadorLG {
         display: none;
@@ -32,12 +58,13 @@
             margin-top: 30px;
         }
     }
-
-    // Ocultar filtros laterales
-    aside.filtros {
-        display: none;
+    .productos-lista {
+        grid-template-columns: repeat(3, 1fr);
     }
+
 }
+
+
 
 // Mobile 
 @media (max-width: 576px) {
@@ -52,4 +79,8 @@
     .titulo-tienda {
         position: static;
     }
+    .productos-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+

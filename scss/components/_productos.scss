@@ -6,32 +6,31 @@
     color: $price-color;
 }
 
-.talles-adultos,
-.talles-kids {
-    list-style: none;
+.pantalla-productos {
+    display: flex;
 }
+
 
 // Sección de productos
 .producto {
     @include hover-scale(1.05, $transition-duration-long);
 }
 
-// Lista de categorías de productos
-.categorias-lista {
-    list-style: none;
+.productos {
+    padding: 1.5rem;
+    width: 83.3333%;
 
-    li {
-        @include hover-color(#eeeeee, $transition-duration);
+    .filtros-dropdown {
+        display: flex;
+
+        button{
+            display: none;
+        }
     }
 }
-
-
-// Talles
-.talles-adultos,
-.talles-kids {
-    cursor: default;
-
-    li {
-        @include hover-color(#ffffff, $transition-duration);
-    }
+.productos-lista {
+    margin-top: 1.5rem;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(5, 1fr);
 }

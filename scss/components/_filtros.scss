@@ -3,13 +3,42 @@
 
 // Estilos de filtros
 .filtros {
+    display: none;
+    border-right: solid 1px $border-color;
     background-color: $background-filtros;
     @include centrar-flex(column);
     padding: 10px;
     width: $max-width-filtros;
 
-    ul {
+    // Lista de categorías de productos
+    .categorias-lista {
         list-style: none;
+        width: 100%;
+
+        li {
+            @include hover-color(#eeeeee, $transition-duration);
+        }
+    }
+
+    //Filtro de precios
+    .filtro-precios {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    //Talles
+    .talles-adultos,
+    .talles-kids {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        list-style: none;
+        cursor: default;
+
+        li {
+            @include hover-color(#ffffff, $transition-duration);
+        }
     }
 }
 
@@ -23,11 +52,16 @@
     div input {
         background-color: antiquewhite;
     }
+    .talles-adultos,
+    .talles-kids {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
 }
 
-// Aside de filtros
-aside.filtros {
-    @include centrar-flex(column);
-    padding: 10px;
-    width: $max-width-filtros;
+.precios-collapse{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
