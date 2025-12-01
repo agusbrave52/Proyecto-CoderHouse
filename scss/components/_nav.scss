@@ -23,9 +23,12 @@ header {
 }
 
 // Buscadores
-#buscadorLG,
+#buscadorLG{
+    @extend %buscador;
+    border-radius: 5px;
+}
 #buscadorSM {
-    background-color: $background-light;
+    @extend %buscador;
 }
 
 // Items de navegación

@@ -14,15 +14,9 @@
 @use 'components/productos' as *;
 @use 'components/tiendas' as *;
 @use 'components/filtros' as *;
+@use 'components/categorias' as *;
 
 //Responsive
 @use 'base/responsive' as *;
-
-// Estilos de categorías
-.categorias {
-    h2 {
-        @extend %titulos-section;
-    }
-}
 
 

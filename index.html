@@ -42,13 +42,13 @@
                     <span>|</span>
                     <li class="nav-item"><a class="nav-link text-nowrap" href="./pages/404.html">La empresa</a></li>
                     <li class="nav-item d-flex">
-                        <input id="buscadorLG" type="search" class="form-control me-2 border border-secondary"
-                            placeholder="🔍 Buscar" aria-label="Search">
+                        <input id="buscadorLG" type="search" placeholder="🔍 Buscar" aria-label="Search">
                     </li>
 
 
                     <li class="nav-item ">
-                        <a href="./pages/404.html" class="d-flex flex-column align-items-center ms-2 pt-3 btn-productos">
+                        <a href="./pages/404.html"
+                            class="d-flex flex-column align-items-center ms-2 pt-3 btn-productos">
                             <i class="bi bi-handbag-fill fs-5"></i>
                             <p>$9999</p>
                         </a>
@@ -62,8 +62,7 @@
 
     <main>
         <!-- Buscador para celular -->
-        <input id="buscadorSM" type="search" class="form-control border border-secondary rounded-0 d-md-none"
-            placeholder="🔍 Buscar" aria-label="Search">
+        <input id="buscadorSM" type="search" placeholder="🔍 Buscar" aria-label="Search">
         <!-- sector de promociones -->
         <section>
             <!-- imagenes que irian rotando -->
@@ -101,26 +100,20 @@
 
         <!-- categorias de ropa -->
         <section class="categorias">
-            <h2 class="text-center">Categorias:</h2>
-            <div class="container-fluid">
-                <div class="row my-3 g-3 d-flex justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-12 producto">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/categorias/800x800-masculino.webp" class="card-img-top"
-                                    alt="Categoria Masculino"></a>
-                        </div>
+            <h2>Categorias:</h2>
+            <div>
+                <div class="contenedor-cat">
+                    <div class="cat">
+                        <a href="./pages/catalogo.html"><img src="./images/categorias/800x800-masculino.webp"
+                                alt="Categoria Masculino"></a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 producto">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/categorias/800x800-femenino.webp" class="card-img-top"
-                                    alt="Categoria Femenino"></a>
-                        </div>
+                    <div class="cat">
+                        <a href="./pages/catalogo.html"><img src="./images/categorias/800x800-femenino.webp"
+                                alt="Categoria Femenino"></a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 producto">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/categorias/800x800-kids.webp" class="card-img-top"
-                                    alt="Categoria Kids"></a>
-                        </div>
+                    <div class="cat">
+                        <a href="./pages/catalogo.html"><img src="./images/categorias/800x800-kids.webp"
+                                alt="Categoria Kids"></a>
                     </div>
                 </div>
             </div>
@@ -128,46 +121,49 @@
 
         <!-- sector destacados -->
         <section class="destacados">
-            <h2 class="text-center">Destacados:</h2>
-            <div class="container-fluid">
-                <div class="row g-4 px-3 my-1 d-flex flex-wrap">
-
-                    <div class="col-md-4 col-lg-3 col-sm-6">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/Destacados/camiseta-basica-unissex-infantil-blanco.jpg"
-                                    class="card-img-top" alt="Camiseta blanca unissex infantil"></a>
-                            <p class="precio">$399</p>
+            <h2>Destacados:</h2>
+            <div class="contenedor">
+                <div class="lista-productos">
+                    <div class="contenedor-producto">
+                        <div class="producto">
+                            <a href="./pages/catalogo.html"><img
+                                    src="./images/Destacados/camiseta-basica-unissex-infantil-blanco.jpg"
+                                    alt="Camiseta blanca unissex infantil"></a>
+                            <p class="precio sombra">$399</p>
                         </div>
-                        <p class="card-description">CAMISETA BÁSICA UNISSEX INFANTIL - BLANCO</p>
+                        <p class="producto-description">CAMISETA BÁSICA UNISSEX INFANTIL - BLANCO</p>
                     </div>
 
-                    <div class="col-md-4 col-lg-3 col-sm-6">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/Destacados/camiseta-basica-infantil-manga-corta-azul.webp"
-                                    class="card-img-top" alt="Camiseta infantil manga corta azul"></a>
-                            <p class="precio">$399</p>
+                    <div class="contenedor-producto">
+                        <div class="producto">
+                            <a href="./pages/catalogo.html"><img
+                                    src="./images/Destacados/camiseta-basica-infantil-manga-corta-azul.webp"
+                                    alt="Camiseta infantil manga corta azul"></a>
+                            <p class="precio sombra">$399</p>
                         </div>
-                        <p class="card-description">CAMISETA BÁSICA INFANTIL MANGA CORTA - AZUL</p>
+                        <p class="producto-description">CAMISETA BÁSICA INFANTIL MANGA CORTA - AZUL</p>
                     </div>
 
-                    <div class="col-md-4 col-lg-3 col-sm-6">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/Destacados/medias-infantiles-basicas-cano-medio-azul.webp"
-                                    class="card-img-top" alt="Medias infantiles básicas caño medio azul"></a>
-                            <p class="precio">$199</p>
+                    <div class="contenedor-producto">
+                        <div class="producto">
+                            <a href="./pages/catalogo.html"><img
+                                    src="./images/Destacados/medias-infantiles-basicas-cano-medio-azul.webp"
+                                    alt="Medias infantiles básicas caño medio azul"></a>
+                            <p class="precio sombra">$199</p>
                         </div>
-                        <p class="card-description">MEDIAS INFANTILES BÁSICAS CAÑO MEDIO - AZUL</p>
+                        <p class="producto-description">MEDIAS INFANTILES BÁSICAS CAÑO MEDIO - AZUL</p>
                     </div>
 
-                    <div class="col-md-4 col-lg-3 col-sm-6">
-                        <div class="card">
-                            <a href="./pages/catalogo.html"><img src="./images/Destacados/musculosa-basica-gris.webp" class="card-img-top"
+                    <div class="contenedor-producto">
+                        <div class="producto">
+                            <a href="./pages/catalogo.html"><img src="./images/Destacados/musculosa-basica-gris.webp"
                                     alt="Musculosa básica gris"></a>
-                            <p class="precio">$499</p>
+                            <p class="precio sombra">$499</p>
                         </div>
-                        <p class="card-description">MUSCULOSA BÁSICA - GRIS</p>
+                        <p class="producto-description">MUSCULOSA BÁSICA - GRIS</p>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>

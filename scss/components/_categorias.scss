@@ -1,0 +1,40 @@
+@use '../utilities/variables' as *;
+@use '../utilities/extends' as *;
+
+// Estilos de categorías
+.categorias {
+    h2 {
+        @extend %titulos-section;
+    }
+
+    div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-left: 6px;
+        padding-right: 6px;
+
+        .contenedor-cat {
+            display: flex;
+            gap: 16px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .cat {
+                width: 32%;
+                transition: transform 0.3s ease, width 0.3s ease;
+                
+                a img {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

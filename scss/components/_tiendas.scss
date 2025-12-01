@@ -15,7 +15,11 @@ main section ul li {
 
 // Contenedor de tiendas
 .contenedor {
-    div div section {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+    div div .img-ver {
         @include centrar-flex(column);
         gap: 10px;
 
@@ -24,16 +28,59 @@ main section ul li {
             height: $image-tienda-height;
             object-fit: cover;
         }
+
+        // Estilos de estrellas
+        .ver {
+            display: inline-block;
+            font-size: 30px;
+        }
+
+        .link-map {
+            @include hover-color($primary-color, $transition-duration);
+            background-color: transparent;
+            border: none;
+            color: $text-color;
+        }
     }
 }
+
 .caja {
-        @include centrar-flex(row);
+    position: relative;
+    @include centrar-flex(row);
+    border: 1px solid $border-color;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.caja-map {
+    border: 1px solid $border-color;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 // Sucursales y mapa
 .sucursales,
 .mapa-sucursales {
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.mapa-sucursales {
+    align-items: center;
+
+    h2{
+        margin-top: 1rem;
+    }
+}
+.sucursales{
+    h2{
+        text-align: center;
+        margin-top: 1rem;
+    }
 }
 
 // Título de la tienda
@@ -41,8 +88,4 @@ main section ul li {
     position: absolute;
     top: 5px;
     left: 5px;
-}
-
-.caja {
-    position: relative;
 }

@@ -12,8 +12,39 @@
 
 
 // Sección de productos
-.producto {
+.producto-cat {
     @include hover-scale(1.05, $transition-duration-long);
+
+    .producto {
+        width: 100%;
+        position: relative;
+        
+
+        a img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .precio {
+
+            color: $price-color;
+            position: absolute;
+            bottom: -18px;
+            left: 0px;
+
+            
+            &.sombra {
+                font-family: "Inter", Arial, sans-serif;
+                font-weight: 800;
+                font-size: 1rem;
+                background: radial-gradient(ellipse, rgba(253, 247, 216, 0.884) 30%, transparent 60%);
+                padding: 1rem 1rem;
+                border-radius: 4px;
+                display: inline-block;
+                text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
 }
 
 .productos {
@@ -23,14 +54,15 @@
     .filtros-dropdown {
         display: flex;
 
-        button{
+        button {
             display: none;
         }
     }
 }
+
 .productos-lista {
     margin-top: 1.5rem;
     display: grid;
-    gap:20px;
+    gap: 20px;
     grid-template-columns: repeat(5, 1fr);
 }

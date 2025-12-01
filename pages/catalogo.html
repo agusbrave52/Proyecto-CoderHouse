@@ -58,8 +58,7 @@
     </header>
     <main>
         <!-- Buscador para celular -->
-        <input id="buscadorSM" type="search" class="form-control border border-secondary rounded-0 d-md-none"
-            placeholder="🔍 Buscar" aria-label="Search">
+        <input id="buscadorSM" type="search" placeholder="🔍 Buscar" aria-label="Search">
 
         <div class="pantalla-productos">
             <aside class="filtros">
@@ -106,7 +105,7 @@
             </aside>
             <section class="productos">
                 <div class="filtros-dropdown">
-                    <button class="btn btn-secondary bi bi-funnel-fill" type="button" data-bs-toggle="collapse"
+                    <button class="bi bi-funnel-fill" type="button" data-bs-toggle="collapse"
                         data-bs-target="#filtrosCollapse" aria-controls="filtrosCollapse" aria-expanded="false"
                         aria-label="Toggle navigation"></button>
                     <select class="form-select" data-bs-toggle="dropdown" aria-expanded="false" name="ordenar"
@@ -121,105 +120,105 @@
                 <div class="collapse filtros-collapse" id="filtrosCollapse">
                     <h4>Categorias</h4>
                     <ul class="categorias-lista">
-                        <li class="btn btn-secondary">Basicos</li>
-                        <li class="btn btn-secondary">Moda</li>
-                        <li class="btn btn-secondary">Deportivos</li>
-                        <li class="btn btn-secondary">Accesorios</li>
-                        <li class="btn btn-secondary">Masculino</li>
-                        <li class="btn btn-secondary">Femenino</li>
-                        <li class="btn btn-secondary">Kids</li>
-                        <li class="btn btn-secondary">Intima</li>
+                        <li>Basicos</li>
+                        <li>Moda</li>
+                        <li>Deportivos</li>
+                        <li>Accesorios</li>
+                        <li>Masculino</li>
+                        <li>Femenino</li>
+                        <li>Kids</li>
+                        <li>Intima</li>
                     </ul>
                     <hr>
                     <h4>Precios ($)</h4>
                     <div class="precios-collapse">
-                        <input class="form-control rounded-0" autocomplete="off" type="number" min="0"
+                        <input class="precios-filtros" autocomplete="off" type="number" min="0"
                             inputmode="numeric" placeholder="desde">
                         <span> - </span>
-                        <input class="form-control rounded-0" autocomplete="off" type="number" min="0"
+                        <input class="precios-filtros" autocomplete="off" type="number" min="0"
                             inputmode="numeric" placeholder="hasta">
                     </div>
                     <hr>
                     <h4>Talles</h4>
                     <ul class="talles-adultos">
-                        <li class="btn btn-secondary">XP</li>
-                        <li class="btn btn-secondary">P</li>
-                        <li class="btn btn-secondary">M</li>
-                        <li class="btn btn-secondary">G</li>
-                        <li class="btn btn-secondary">XG</li>
-                        <li class="btn btn-secondary">XXG</li>
+                        <li>XP</li>
+                        <li>P</li>
+                        <li>M</li>
+                        <li>G</li>
+                        <li>XG</li>
+                        <li>XXG</li>
                     </ul>
                     <ul class="talles-kids">
-                        <li class="btn btn-secondary">2</li>
-                        <li class="btn btn-secondary">4</li>
-                        <li class="btn btn-secondary">6</li>
-                        <li class="btn btn-secondary">8</li>
-                        <li class="btn btn-secondary">10</li>
-                        <li class="btn btn-secondary">12</li>
-                        <li class="btn btn-secondary">14</li>
-                        <li class="btn btn-secondary">16</li>
+                        <li>2</li>
+                        <li>4</li>
+                        <li>6</li>
+                        <li>8</li>
+                        <li>10</li>
+                        <li>12</li>
+                        <li>14</li>
+                        <li>16</li>
                     </ul>
                 </div>
 
                 <div class="productos-lista">
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img
                                     src="../images/Destacados/camiseta-basica-unissex-infantil-blanco.jpg"
-                                    class="card-img-top" alt="Camiseta blanca unissex infantil"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Camiseta blanca unissex infantil"></a>
+                            <p class="precio sombra">$399</p>
                         </div>
-                        <p class="card-description">CAMISETA BÁSICA UNISSEX INFANTIL - BLANCO</p>
+                        <p class="producto-description">CAMISETA BÁSICA UNISSEX INFANTIL - BLANCO</p>
                     </div>
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img
                                     src="../images/Destacados/camiseta-basica-infantil-manga-corta-azul.webp"
-                                    class="card-img-top" alt="Camiseta básica infantil manga corta azul"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Camiseta básica infantil manga corta azul"></a>
+                            <p class="precio sombra">$399</p>
                         </div>
-                        <p class="card-description">CAMISETA BÁSICA INFANTIL - MANGA CORTA AZUL</p>
+                        <p class="producto-description">CAMISETA BÁSICA INFANTIL - MANGA CORTA AZUL</p>
                     </div>
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img
                                     src="../images/Destacados/medias-infantiles-basicas-cano-medio-azul.webp"
-                                    class="card-img-top" alt="Medias infantiles básicas caño medio azul"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Medias infantiles básicas caño medio azul"></a>
+                            <p class="precio sombra">$399</p>
                         </div>
-                        <p class="card-description">MEDIAS INFANTILES BÁSICAS - CAÑO MEDIO AZUL</p>
+                        <p class="producto-description">MEDIAS INFANTILES BÁSICAS - CAÑO MEDIO AZUL</p>
                     </div>
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img src="../images/Destacados/musculosa-basica-gris.webp"
-                                    class="card-img-top" alt="Musculosa básica gris"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Musculosa básica gris"></a>
+                            <p class="precio sombra">$499</p>
                         </div>
-                        <p class="card-description">MUSCULOSA BÁSICA - GRIS</p>
+                        <p class="producto-description">MUSCULOSA BÁSICA - GRIS</p>
                     </div>
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img src="../images/Destacados/camiseta-basica-infantil-gris.webp"
-                                    class="card-img-top" alt="Camiseta básica infantil gris"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Camiseta básica infantil gris"></a>
+                            <p class="precio sombra">$399</p>
                         </div>
-                        <p class="card-description">CAMISETA BÁSICA INFANTIL - GRIS</p>
+                        <p class="producto-description">CAMISETA BÁSICA INFANTIL - GRIS</p>
                     </div>
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img src="../images/Destacados/musculosa-femenina-con-lino-rojo.webp"
-                                    class="card-img-top" alt="Musculosa femenina con lino rojo"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Musculosa femenina con lino rojo"></a>
+                            <p class="precio sombra">$1099</p>
                         </div>
-                        <p class="card-description">MUSCULOSA FEMENINA CON LINO - ROJO</p>
+                        <p class="producto-description">MUSCULOSA FEMENINA CON LINO - ROJO</p>
                     </div>
-                    <div class=" producto">
-                        <div class="card">
+                    <div class="producto-cat">
+                        <div class="producto">
                             <a href="./404.html"><img src="../images/Destacados/camiseta-basica-manga-corta-verde.webp"
-                                    class="card-img-top" alt="Camiseta básica manga corta verde"></a>
-                            <p class="precio">$399</p>
+                                    class="producto-img-top" alt="Camiseta básica manga corta verde"></a>
+                            <p class="precio sombra">$549</p>
                         </div>
-                        <p class="card-description">CAMISETA BÁSICA MANGA CORTA - VERDE</p>
+                        <p class="producto-description">CAMISETA BÁSICA MANGA CORTA - VERDE</p>
                     </div>
                 </div>
             </section>

@@ -7,10 +7,6 @@
     .mapa-sucursales {
         width: 100%;
     }
-
-    .contenedor {
-        flex-direction: column;
-    }
     .productos-lista {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -34,19 +30,25 @@
     .productos-lista {
         grid-template-columns: repeat(4, 1fr);
     }
+    .categorias .contenedor .contenedor-cat .cat{
+        width: 31%;
+    }
 
+}
+@media (max-width: 862px) {
+    .categorias div .contenedor-cat .cat {
+        width: 47%;
+    }
+    // Ocultar buscador grande
+    #buscadorLG {
+        display: none;
+    }
 }
 
 // Tablet 
 @media (max-width: 768px) {
-
     // Ocultar separadores del nav
     header nav div ul span {
-        display: none;
-    }
-
-    // Ocultar buscador grande
-    #buscadorLG {
         display: none;
     }
 
@@ -61,7 +63,6 @@
     .productos-lista {
         grid-template-columns: repeat(3, 1fr);
     }
-
 }
 
 
@@ -81,6 +82,21 @@
     }
     .productos-lista {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .categorias div .contenedor-cat .cat {
+        width: 100%;
+    }
+}
+
+@media (min-width: 862px){
+    #buscadorSM {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px){
+    .lista-productos {
+        justify-content: center;
     }
 }
 

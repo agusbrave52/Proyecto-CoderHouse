@@ -1,38 +1,63 @@
 @use '../utilities/variables' as *;
 @use '../utilities/extends' as *;
+@use '../utilities/mixins' as *;
 
 // Estilos de productos destacados
 .destacados {
     h2 {
         @extend %titulos-section;
     }
-
-    div p {
-        color: $text-secondary;
-    }
-
-    .row .col p {
-        padding-top: 10px;
-    }
 }
 
 // Card de productos
-.card {
-    .precio {
-        color: $price-color;
-        position: absolute;
-        bottom: 0px;
-        left: 10px;
-        text-shadow: $price-shadow 0px 0px 3px;
+
+
+.lista-productos {
+    display: flex;
+    gap: 16px;
+    padding: 1rem;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .contenedor-producto {
+        min-width: 250px;
+        border-radius: 8px;
+        padding: .5rem;
+        transition: transform 0.3s ease;
+
+        .producto {
+            width: 100%;
+            position: relative;
+
+            a img {
+                width: 100%;
+                height: fit-content;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .precio {
+                color: $price-color;
+                position: absolute;
+                bottom: 0px;
+                left: 10px;
+
+                &.sombra {
+                    font-family: "Inter", Arial, sans-serif;
+                    font-weight: 800;
+                    font-size: 1rem;
+                    background: radial-gradient(ellipse, rgba(253, 247, 216, 0.884) 30%, transparent 60%);
+                    padding: 1rem 1rem;
+                    border-radius: 4px;
+                    display: inline-block;
+                    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+
+        &:hover {
+            @include hover-scale(1.05, $transition-duration-long);
+        }
     }
-}
-
-// Estilos de estrellas
-.rating {
-    display: inline-block;
-    font-size: 30px;
-}
-
-.stars {
-    color: $stars-color;
 }

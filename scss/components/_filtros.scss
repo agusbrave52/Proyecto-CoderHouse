@@ -1,5 +1,6 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
+@use '../utilities/extends' as *;
 
 // Estilos de filtros
 .filtros {
@@ -49,6 +50,10 @@
     border-bottom-left-radius: 20px;
     padding: 15px;
 
+    .categorias-lista, .talles-adultos, .talles-kids {
+        @extend %boton-filtro;
+    }
+
     div input {
         background-color: antiquewhite;
     }
@@ -64,4 +69,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    .precios-filtros{
+        @extend %buscador;
+    }
+}
+
+.filtros-dropdown{
+    button{
+        align-items: center;
+        border: none;
+        @extend %btn;
+    }
 }
