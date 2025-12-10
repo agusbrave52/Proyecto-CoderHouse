@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- bootstrap icons -->
@@ -14,17 +15,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    <title>Tiendas</title>
+    <meta name="description"
+        content="Ubicaciones Hering - Encuentra tu tienda más cercana. Consulta direcciones, horarios y cómo llegar a nuestras sucursales.">
+    <title>Tiendas Hering - Ubicaciones y horarios</title>
 </head>
 
 <body>
     <header>
         <!-- barra de navegacion -->
-        <nav class="navbar navbar-expand-md border-bottom border-secondary">
+        <nav class="navbar navbar-expand-md border-bottom border-secondary" aria-label="Navegación principal">
             <div class="navbar-brand p-4">
                 <a href="../index.html" class="fs-2">
                     <img src="../images/Hering.png" width="60" alt="Logo de Hering">
-                    Hering
+                    <h1>Hering</h1>
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -37,7 +40,7 @@
                     <span>|</span>
                     <li class="nav-item"><a class="nav-link active" href="./tiendas.html">Tiendas</a></li>
                     <span>|</span>
-                    <li class="nav-item"><a class="nav-link" href="./404.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
                     <span>|</span>
                     <li class="nav-item"><a class="nav-link text-nowrap" href="./404.html">La empresa</a></li>
 
@@ -68,44 +71,54 @@
 
                     <div class="caja">
                         <h3 class="titulo-tienda">Nuevocentro Shopping</h3>
-                        <p>Nuevocentro Shopping es un centro comercial uruguayo, ubicado en la intersección de la Avenida Luis Alberto de Herrera 3365 y Bulevard General Artigas, en el barrio Jacinto Vera, Montevideo</p>
+                        <p>Nuevocentro Shopping es un centro comercial uruguayo, ubicado en la intersección de la
+                            Avenida Luis Alberto de Herrera 3365 y Bulevard General Artigas, en el barrio Jacinto Vera,
+                            Montevideo</p>
                         <div class="img-ver">
-                            <img src="../images/tiendas/nuevocentro.webp" alt="imagen de la tienda 1">
+                            <img src="../images/tiendas/nuevocentro.webp" alt="imagen de la tienda Nuevocentro">
                             <div class="ver">
-                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button class="link-map">
+                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button
+                                    class="link-map">
                             </div>
                         </div>
                     </div>
 
                     <div class="caja">
                         <h3 class="titulo-tienda">Montevideo Shopping</h3>
-                        <p>Montevideo Shopping es un centro comercial de la ciudad de Montevideo, el primero en el país y en el Río de la Plata. Pegado al mismo, se encuentran las Torres del World Trade Center de Montevideo.</p>
+                        <p>Montevideo Shopping es un centro comercial de la ciudad de Montevideo, el primero en el país
+                            y en el Río de la Plata. Pegado al mismo, se encuentran las Torres del World Trade Center de
+                            Montevideo.</p>
                         <div class="img-ver">
-                            <img src="../images/tiendas/montevideo.webp" alt="imagen de la tienda 2">
+                            <img src="../images/tiendas/montevideo.webp" alt="imagen de la tienda Montevideo">
                             <div class="ver">
-                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button class="link-map">
+                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button
+                                    class="link-map">
                             </div>
                         </div>
                     </div>
 
                     <div class="caja">
                         <h3 class="titulo-tienda">Portones Shopping</h3>
-                        <p>Portones Shopping es un centro comercial de la ciudad de Montevideo, ubicado en el barrio de Carrasco, sobre las avenidas Bolivia e Italia.</p>
+                        <p>Portones Shopping es un centro comercial de la ciudad de Montevideo, ubicado en el barrio de
+                            Carrasco, sobre las avenidas Bolivia e Italia.</p>
                         <div class="img-ver">
-                            <img src="../images/tiendas/portones.webp" alt="imagen de la tienda 3">
+                            <img src="../images/tiendas/portones.webp" alt="imagen de la tienda Portones">
                             <div class="ver">
-                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button class="link-map">
+                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button
+                                    class="link-map">
                             </div>
                         </div>
                     </div>
 
                     <div class="caja">
                         <h3 class="titulo-tienda">Punta Carretas Shopping</h3>
-                        <p>Punta Carretas Shopping es un centro comercial uruguayo, ubicado sobre la calle José Ellauri 350 en el barrio Punta Carretas, Montevideo.</p>
+                        <p>Punta Carretas Shopping es un centro comercial uruguayo, ubicado sobre la calle José Ellauri
+                            350 en el barrio Punta Carretas, Montevideo.</p>
                         <div class="img-ver">
-                            <img src="../images/tiendas/puntacarretas.webp" alt="imagen de la tienda 4">
+                            <img src="../images/tiendas/puntacarretas.webp" alt="imagen de la tienda Punta Carretas">
                             <div class="ver">
-                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button class="link-map">
+                                <button class="link-map"><i class="bi bi-geo-alt-fill"></i>Ver mapa</button
+                                    class="link-map">
                             </div>
                         </div>
                     </div>
@@ -143,7 +156,7 @@
                 <p>Hering</p>
                 <a href="./404.html">Empresa</a>
                 <a href="./404.html">Trabaja con nosotros</a>
-                <a href="./404.html">Contacto</a>
+                <a href="./contacto.html">Contacto</a>
                 <a href="./tiendas.html">Tiendas</a>
             </section>
             <section class="footer-centrado col-md-5 col-sm-12 d-flex flex-column">

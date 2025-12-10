@@ -10,6 +10,13 @@ header {
         div {
             a {
                 @extend %link-normal;
+
+                h1 {
+                    display: inline;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    margin: 0;
+                }
             }
 
             // Separadores entre items del nav
@@ -23,10 +30,11 @@ header {
 }
 
 // Buscadores
-#buscadorLG{
+#buscadorLG {
     @extend %buscador;
     border-radius: 5px;
 }
+
 #buscadorSM {
     @extend %buscador;
 }
@@ -35,6 +43,7 @@ header {
 .nav-item {
     font-weight: bold;
 }
-.btn-productos:hover{
+
+.btn-productos:hover {
     @include hover-bag(0.3s, -10px);
 }

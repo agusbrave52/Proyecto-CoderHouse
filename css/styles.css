@@ -5,6 +5,15 @@
   font-family: "Arimo", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body main {
+  flex: 1;
+}
+
 .categorias h2, .destacados h2 {
   color: #77531d;
   background-color: #fce2b2;
@@ -55,6 +64,12 @@ header nav div a {
 
 header nav {
   background: linear-gradient(to bottom, #fdedcf, #f5d49a);
+}
+header nav div a h1 {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }
 header nav div ul span {
   margin: 0 10px;
@@ -406,6 +421,174 @@ main section ul li {
   transform: scale(1.05);
 }
 
+.contacto {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+.contacto-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contacto h2 {
+  text-align: center;
+  color: #77531d;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.contacto-descripcion {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #504d4a;
+  margin-bottom: 3rem;
+}
+
+.formulario-wrapper {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.formulario-contacto {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.formulario-contacto .form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.formulario-contacto .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #313131;
+}
+.formulario-contacto .form-group label .requerido {
+  color: #dc3545;
+}
+.formulario-contacto .form-group input,
+.formulario-contacto .form-group select,
+.formulario-contacto .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.formulario-contacto .form-group input:focus,
+.formulario-contacto .form-group select:focus,
+.formulario-contacto .form-group textarea:focus {
+  outline: none;
+  border-color: #77531d;
+  box-shadow: 0 0 0 3px rgba(119, 83, 29, 0.1);
+}
+.formulario-contacto .form-group input::placeholder,
+.formulario-contacto .form-group select::placeholder,
+.formulario-contacto .form-group textarea::placeholder {
+  color: #999;
+}
+.formulario-contacto .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.formulario-contacto .form-group select {
+  cursor: pointer;
+  appearance: none;
+}
+.formulario-contacto .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.formulario-contacto .checkbox-group input[type=checkbox] {
+  width: auto;
+  margin-top: 0.25rem;
+  cursor: pointer;
+}
+.formulario-contacto .checkbox-group label {
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+.formulario-contacto .checkbox-group label a {
+  color: #77531d;
+  text-decoration: underline;
+}
+.formulario-contacto .checkbox-group label a:hover {
+  color: rgb(77.9932432432, 54.3986486486, 19.0067567568);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.form-buttons button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-buttons button i {
+  font-size: 1.1rem;
+}
+.form-buttons .btn-enviar {
+  background-color: #77531d;
+  color: white;
+}
+.form-buttons .btn-enviar:hover {
+  background-color: rgb(77.9932432432, 54.3986486486, 19.0067567568);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.form-buttons .btn-enviar:active {
+  transform: translateY(0);
+}
+.form-buttons .btn-limpiar {
+  background-color: #6c757d;
+  color: white;
+}
+.form-buttons .btn-limpiar:hover {
+  background-color: rgb(84.3605150215, 91.3905579399, 97.6394849785);
+}
+
+.contacto-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.contacto-info .info-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contacto-info .info-item i {
+  font-size: 3rem;
+  color: #77531d;
+  margin-bottom: 1rem;
+}
+.contacto-info .info-item h5 {
+  font-size: 1.25rem;
+  color: #313131;
+  margin-bottom: 0.5rem;
+}
+.contacto-info .info-item p {
+  color: #504d4a;
+  margin: 0;
+  line-height: 1.6;
+}
+
 @media (max-width: 1200px) {
   .sucursales,
   .mapa-sucursales {
@@ -452,6 +635,22 @@ main section ul li {
   }
   .productos-lista {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .contacto h2 {
+    font-size: 2rem;
+  }
+  .formulario-contacto {
+    padding: 1.5rem;
+  }
+  .form-buttons {
+    flex-direction: column;
+  }
+  .form-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+  .contacto-info {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 576px) {

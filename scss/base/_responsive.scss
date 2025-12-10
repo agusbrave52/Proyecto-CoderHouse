@@ -63,6 +63,29 @@
     .productos-lista {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .contacto {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .formulario-contacto {
+        padding: 1.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+
+        button {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .contacto-info {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -99,4 +122,5 @@
         justify-content: center;
     }
 }
+
 
