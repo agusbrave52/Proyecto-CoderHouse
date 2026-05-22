@@ -6,10 +6,12 @@
 .filtros {
     display: none;
     border-right: solid 1px $border-color;
-    background-color: $background-filtros;
+    background: linear-gradient(180deg, rgba(239, 231, 216, 0.95), rgba(216, 204, 184, 0.9));
     @include centrar-flex(column);
-    padding: 10px;
+    padding: 16px 12px;
     width: $max-width-filtros;
+    border-radius: $radius-md;
+    box-shadow: $shadow-soft;
 
     // Lista de categorías de productos
     .categorias-lista {
@@ -45,10 +47,11 @@
 
 // Filtros con collapse
 .filtros-collapse {
-    background-color: $background-filtros-dark;
+    background: linear-gradient(180deg, rgba(216, 204, 184, 0.95), rgba(200, 186, 164, 0.95));
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 15px;
+    box-shadow: $shadow-soft;
 
     .categorias-lista, .talles-adultos, .talles-kids {
         @extend %boton-filtro;
@@ -79,5 +82,6 @@
         align-items: center;
         border: none;
         @extend %btn;
+        gap: 6px;
     }
 }

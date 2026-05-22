@@ -2,42 +2,59 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arimo", sans-serif;
+  font-family: "Arimo", "Trebuchet MS", sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: #2f2b27;
+  background: radial-gradient(circle at 10% 8%, rgba(255, 255, 255, 0.42), transparent 35%), radial-gradient(circle at 90% 0%, rgba(255, 233, 191, 0.6), transparent 30%), linear-gradient(180deg, #f7ecda, #efe0c7);
 }
 body main {
   flex: 1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #2f1d12;
+}
+
 .categorias h2, .destacados h2 {
-  color: #77531d;
-  background-color: #fce2b2;
-  border-top: #c49530 solid 2px;
-  border-bottom: #c49530 solid 2px;
-  padding: 10px;
+  color: #6f3f1b;
+  background: linear-gradient(125deg, #ffe0aa, #f9e8c9);
+  border-top: #b78124 solid 2px;
+  border-bottom: #b78124 solid 2px;
+  padding: 14px;
   text-align: center;
+  border-radius: 16px;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
 }
 
 header nav div a {
   text-decoration: none;
-  color: #313131;
+  color: #2f2b27;
 }
 
 .precios-collapse .precios-filtros, #buscadorLG, #buscadorSM {
-  background-color: #ffeed1;
-  border: 1px solid #999792;
+  background-color: #fff6e8;
+  border: 1px solid #aca18e;
   width: 100%;
-  padding: 5px 10px;
-  transition: box-shadow 0.2s;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 .precios-collapse .precios-filtros:focus, #buscadorLG:focus, #buscadorSM:focus {
   outline: none;
-  box-shadow: 0px 0px 10px #77531d;
+  border-color: #6f3f1b;
+  box-shadow: 0 0 0 3px rgba(111, 63, 27, 0.2);
 }
 
 .filtros-collapse .categorias-lista, .filtros-collapse .talles-adultos, .filtros-collapse .talles-kids {
@@ -49,21 +66,29 @@ header nav div a {
   list-style: none;
 }
 .filtros-collapse .categorias-lista li:hover, .filtros-collapse .talles-adultos li:hover, .filtros-collapse .talles-kids li:hover {
-  background-color: #313131;
+  background-color: #2f2b27;
   transition: background-color 0.2s ease;
 }
 
 .filtros-dropdown button, .filtros-collapse .categorias-lista li, .filtros-collapse .talles-adultos li, .filtros-collapse .talles-kids li {
   cursor: pointer;
   width: fit-content;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #6b737a;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #5f676f, #485058);
   color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.filtros-dropdown button:hover, .filtros-collapse .categorias-lista li:hover, .filtros-collapse .talles-adultos li:hover, .filtros-collapse .talles-kids li:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
-  background: linear-gradient(to bottom, #fdedcf, #f5d49a);
+  background: linear-gradient(160deg, rgba(249, 232, 201, 0.96), rgba(232, 190, 121, 0.92));
+  border-bottom: 1px solid rgba(111, 63, 27, 0.2);
+  box-shadow: 0 8px 20px rgba(47, 29, 18, 0.12);
+  backdrop-filter: blur(6px);
 }
 header nav div a h1 {
   display: inline;
@@ -73,8 +98,18 @@ header nav div a h1 {
 }
 header nav div ul span {
   margin: 0 10px;
-  color: #77531d;
+  color: #6f3f1b;
   font-weight: bold;
+}
+header nav div .nav-link {
+  color: #2f1d12;
+  border-radius: 10px;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+header nav div .nav-link:hover, header nav div .nav-link:focus {
+  background-color: rgba(111, 63, 27, 0.12);
+  color: #6f3f1b;
+  transform: translateY(-1px);
 }
 
 #buscadorLG {
@@ -83,6 +118,7 @@ header nav div ul span {
 
 .nav-item {
   font-weight: bold;
+  letter-spacing: 0.02em;
 }
 
 .btn-productos:hover {
@@ -99,17 +135,20 @@ header nav div ul span {
 
 .lista-productos {
   display: flex;
-  gap: 16px;
-  padding: 1rem;
+  gap: 18px;
+  padding: 1.25rem;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
 }
 .lista-productos .contenedor-producto {
   min-width: 250px;
-  border-radius: 8px;
-  padding: 0.5rem;
-  transition: transform 0.3s ease;
+  border-radius: 16px;
+  padding: 0.75rem;
+  background: linear-gradient(180deg, rgba(255, 250, 240, 0.95), rgba(252, 236, 206, 0.85));
+  border: 1px solid rgba(172, 161, 142, 0.45);
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .lista-productos .contenedor-producto .producto {
   width: 100%;
@@ -119,23 +158,23 @@ header nav div ul span {
   width: 100%;
   height: fit-content;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .lista-productos .contenedor-producto .producto .precio {
-  color: #278d1a;
+  color: #0f7c3c;
   position: absolute;
   bottom: 0px;
   left: 10px;
 }
 .lista-productos .contenedor-producto .producto .precio.sombra {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Arimo", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 1rem;
-  background: radial-gradient(ellipse, rgba(253, 247, 216, 0.884) 30%, transparent 60%);
-  padding: 1rem 1rem;
-  border-radius: 4px;
+  background: radial-gradient(ellipse, rgba(255, 246, 226, 0.95) 32%, transparent 68%);
+  padding: 1rem;
+  border-radius: 10px;
   display: inline-block;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 .lista-productos .contenedor-producto:hover {
   transition: transform 0.4s ease;
@@ -143,10 +182,15 @@ header nav div ul span {
 .lista-productos .contenedor-producto:hover:hover {
   transform: scale(1.05);
 }
+.lista-productos .contenedor-producto:hover {
+  box-shadow: 0 14px 34px rgba(47, 29, 18, 0.14);
+}
 
 footer {
-  background-color: #d1c0a3;
-  color: #42321b;
+  background: linear-gradient(180deg, rgba(234, 216, 180, 0.96), rgba(214, 193, 156, 0.96));
+  color: #2f1d12;
+  border-top: 1px solid rgba(111, 63, 27, 0.2);
+  box-shadow: 0 -8px 24px rgba(47, 29, 18, 0.1);
 }
 footer section p {
   font-size: large;
@@ -157,16 +201,20 @@ footer section p {
   text-align: start;
 }
 .footer-start a {
-  color: #42321b;
+  color: #2f1d12;
 }
 
 .footer-centrado div img {
   width: 40px;
   margin: 0 5px;
+  transition: transform 0.2s;
+}
+.footer-centrado div img:hover {
+  transform: translateY(-2px);
 }
 .footer-centrado a {
   text-decoration: none;
-  color: #42321b;
+  color: #2f1d12;
 }
 .footer-centrado a i.bi-facebook {
   color: #3b5998;
@@ -174,9 +222,15 @@ footer section p {
 .footer-centrado a i.bi-instagram {
   color: #c32aa3;
 }
+.footer-centrado a i {
+  transition: transform 0.2s;
+}
+.footer-centrado a i:hover {
+  transform: scale(1.08);
+}
 
 .precio {
-  color: #278d1a;
+  color: #0f7c3c;
 }
 
 .pantalla-productos {
@@ -189,34 +243,42 @@ footer section p {
 .producto-cat:hover {
   transform: scale(1.05);
 }
+.producto-cat {
+  background: linear-gradient(180deg, rgba(255, 250, 240, 0.92), rgba(252, 236, 206, 0.82));
+  border: 1px solid rgba(172, 161, 142, 0.45);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
+}
 .producto-cat .producto {
   width: 100%;
   position: relative;
 }
 .producto-cat .producto a img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .producto-cat .producto .precio {
-  color: #278d1a;
+  color: #0f7c3c;
   position: absolute;
   bottom: -18px;
   left: 0px;
 }
 .producto-cat .producto .precio.sombra {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Arimo", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 1rem;
-  background: radial-gradient(ellipse, rgba(253, 247, 216, 0.884) 30%, transparent 60%);
+  background: radial-gradient(ellipse, rgba(255, 246, 226, 0.95) 32%, transparent 68%);
   padding: 1rem 1rem;
-  border-radius: 4px;
+  border-radius: 10px;
   display: inline-block;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
 .productos {
   padding: 1.5rem;
   width: 83.3333%;
+  border-left: 1px solid rgba(116, 101, 84, 0.2);
 }
 .productos .filtros-dropdown {
   display: flex;
@@ -235,11 +297,15 @@ footer section p {
 .mapa {
   width: 90%;
   height: 600px;
-  border: solid 3px #8a8372;
+  border: solid 3px #746554;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(47, 29, 18, 0.14);
 }
 
 main section ul li {
-  border: solid 1px #999792;
+  border: solid 1px #aca18e;
+  border-radius: 10px;
+  background-color: rgba(255, 250, 240, 0.65);
 }
 
 .contenedor {
@@ -268,12 +334,13 @@ main section ul li {
   border: none;
 }
 .contenedor div div .img-ver .link-map:hover {
-  color: #77531d;
+  color: #6f3f1b;
 }
 .contenedor div div .img-ver .link-map {
   background-color: transparent;
   border: none;
-  color: #313131;
+  color: #2f2b27;
+  font-weight: 700;
 }
 
 .caja {
@@ -281,18 +348,23 @@ main section ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid #999792;
+  border: 1px solid #aca18e;
   padding: 1rem;
   margin-bottom: 1rem;
+  background: linear-gradient(180deg, rgba(255, 250, 240, 0.92), rgba(245, 230, 203, 0.85));
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
 }
 
 .caja-map {
-  border: 1px solid #999792;
+  border: 1px solid #aca18e;
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
+  border-radius: 16px;
+  background-color: rgba(255, 250, 240, 0.7);
 }
 
 .sucursales,
@@ -320,17 +392,23 @@ main section ul li {
   position: absolute;
   top: 5px;
   left: 5px;
+  background-color: rgba(14, 127, 111, 0.12);
+  color: #0e7f6f;
+  padding: 2px 8px;
+  border-radius: 999px;
 }
 
 .filtros {
   display: none;
-  border-right: solid 1px #999792;
-  background-color: rgb(202, 202, 202);
+  border-right: solid 1px #aca18e;
+  background: linear-gradient(180deg, rgba(239, 231, 216, 0.95), rgba(216, 204, 184, 0.9));
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 16px 12px;
   width: 250px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
 }
 .filtros .categorias-lista {
   list-style: none;
@@ -369,10 +447,11 @@ main section ul li {
 }
 
 .filtros-collapse {
-  background-color: rgb(141, 141, 141);
+  background: linear-gradient(180deg, rgba(216, 204, 184, 0.95), rgba(200, 186, 164, 0.95));
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 15px;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
 }
 .filtros-collapse div input {
   background-color: antiquewhite;
@@ -392,6 +471,7 @@ main section ul li {
 .filtros-dropdown button {
   align-items: center;
   border: none;
+  gap: 6px;
 }
 
 .categorias div {
@@ -411,19 +491,23 @@ main section ul li {
 }
 .categorias div .contenedor-cat .cat {
   width: 32%;
-  transition: transform 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
 }
 .categorias div .contenedor-cat .cat a img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 .categorias div .contenedor-cat .cat:hover {
   transform: scale(1.05);
+  box-shadow: 0 14px 34px rgba(47, 29, 18, 0.14);
 }
 
 .contacto {
   padding: 3rem 1rem;
-  background-color: #f8f9fa;
+  background: radial-gradient(circle at 85% 15%, rgba(255, 233, 191, 0.5), transparent 30%), radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.45), transparent 35%), linear-gradient(180deg, rgba(247, 236, 218, 0.8), rgba(239, 224, 199, 0.8));
 }
 .contacto-contenedor {
   max-width: 1200px;
@@ -431,14 +515,14 @@ main section ul li {
 }
 .contacto h2 {
   text-align: center;
-  color: #77531d;
+  color: #6f3f1b;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .contacto-descripcion {
   text-align: center;
   font-size: 1.1rem;
-  color: #504d4a;
+  color: #5e554c;
   margin-bottom: 3rem;
 }
 
@@ -448,10 +532,11 @@ main section ul li {
 }
 
 .formulario-contacto {
-  background: white;
+  background: rgba(255, 250, 240, 0.96);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: 1px solid rgba(172, 161, 142, 0.4);
+  box-shadow: 0 14px 34px rgba(47, 29, 18, 0.14);
 }
 .formulario-contacto .form-group {
   margin-bottom: 1.5rem;
@@ -461,7 +546,7 @@ main section ul li {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #313131;
+  color: #2f2b27;
 }
 .formulario-contacto .form-group label .requerido {
   color: #dc3545;
@@ -471,8 +556,8 @@ main section ul li {
 .formulario-contacto .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #ddd;
-  border-radius: 5px;
+  border: 2px solid #d6cbb8;
+  border-radius: 10px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -480,7 +565,7 @@ main section ul li {
 .formulario-contacto .form-group select:focus,
 .formulario-contacto .form-group textarea:focus {
   outline: none;
-  border-color: #77531d;
+  border-color: #6f3f1b;
   box-shadow: 0 0 0 3px rgba(119, 83, 29, 0.1);
 }
 .formulario-contacto .form-group input::placeholder,
@@ -512,11 +597,11 @@ main section ul li {
   font-weight: normal;
 }
 .formulario-contacto .checkbox-group label a {
-  color: #77531d;
+  color: #6f3f1b;
   text-decoration: underline;
 }
 .formulario-contacto .checkbox-group label a:hover {
-  color: rgb(77.9932432432, 54.3986486486, 19.0067567568);
+  color: rgb(69.9782608696, 39.7173913043, 17.0217391304);
 }
 
 .form-buttons {
@@ -541,11 +626,11 @@ main section ul li {
   font-size: 1.1rem;
 }
 .form-buttons .btn-enviar {
-  background-color: #77531d;
+  background: linear-gradient(145deg, #6f3f1b, #8b5824);
   color: white;
 }
 .form-buttons .btn-enviar:hover {
-  background-color: rgb(77.9932432432, 54.3986486486, 19.0067567568);
+  background-color: rgb(69.9782608696, 39.7173913043, 17.0217391304);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -553,7 +638,7 @@ main section ul li {
   transform: translateY(0);
 }
 .form-buttons .btn-limpiar {
-  background-color: #6c757d;
+  background: linear-gradient(145deg, #687078, #4f5861);
   color: white;
 }
 .form-buttons .btn-limpiar:hover {
@@ -569,22 +654,23 @@ main section ul li {
 .contacto-info .info-item {
   text-align: center;
   padding: 1.5rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 250, 240, 0.94);
+  border: 1px solid rgba(172, 161, 142, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(47, 29, 18, 0.08);
 }
 .contacto-info .info-item i {
   font-size: 3rem;
-  color: #77531d;
+  color: #6f3f1b;
   margin-bottom: 1rem;
 }
 .contacto-info .info-item h5 {
   font-size: 1.25rem;
-  color: #313131;
+  color: #2f2b27;
   margin-bottom: 0.5rem;
 }
 .contacto-info .info-item p {
-  color: #504d4a;
+  color: #5e554c;
   margin: 0;
   line-height: 1.6;
 }
@@ -680,5 +766,3 @@ main section ul li {
     justify-content: center;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -5,7 +5,10 @@
 // Estilos del navegador y header
 header {
     nav {
-        background: linear-gradient(to bottom, $primary-light, $primary-medium);
+        background: linear-gradient(160deg, rgba(249, 232, 201, 0.96), rgba(232, 190, 121, 0.92));
+        border-bottom: 1px solid rgba(111, 63, 27, 0.2);
+        box-shadow: 0 8px 20px rgba(47, 29, 18, 0.12);
+        backdrop-filter: blur(6px);
 
         div {
             a {
@@ -25,6 +28,19 @@ header {
                 color: $primary-color;
                 font-weight: bold;
             }
+
+            .nav-link {
+                color: $primary-dark;
+                border-radius: $radius-sm;
+                transition: background-color $transition-duration, color $transition-duration, transform $transition-duration;
+
+                &:hover,
+                &:focus {
+                    background-color: rgba(111, 63, 27, 0.12);
+                    color: $primary-color;
+                    transform: translateY(-1px);
+                }
+            }
         }
     }
 }
@@ -42,6 +58,7 @@ header {
 // Items de navegación
 .nav-item {
     font-weight: bold;
+    letter-spacing: 0.02em;
 }
 
 .btn-productos:hover {

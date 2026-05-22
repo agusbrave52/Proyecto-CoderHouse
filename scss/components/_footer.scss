@@ -2,9 +2,10 @@
 
 // Estilos del footer
 footer {
-    
-    background-color: $background-footer;
+    background: linear-gradient(180deg, rgba(234, 216, 180, 0.96), rgba(214, 193, 156, 0.96));
     color: $text-footer;
+    border-top: 1px solid rgba(111, 63, 27, 0.2);
+    box-shadow: 0 -8px 24px rgba(47, 29, 18, 0.1);
 
     section p {
         font-size: large;
@@ -26,6 +27,11 @@ footer {
     div img {
         width: $icon-size;
         margin: 0 5px;
+        transition: transform $transition-duration;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
     }
 
     a {
@@ -38,6 +44,14 @@ footer {
 
         i.bi-instagram {
             color: $instagram-color;
+        }
+
+        i {
+            transition: transform $transition-duration;
+
+            &:hover {
+                transform: scale(1.08);
+            }
         }
     }
 }

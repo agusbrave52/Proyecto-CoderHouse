@@ -6,11 +6,15 @@
     width: 90%;
     height: $map-height;
     border: solid 3px $border-dark;
+    border-radius: $radius-md;
+    box-shadow: $shadow-medium;
 }
 
 // Estilos de tiendas
 main section ul li {
     border: solid 1px $border-color;
+    border-radius: $radius-sm;
+    background-color: rgba(255, 250, 240, 0.65);
 }
 
 // Contenedor de tiendas
@@ -40,6 +44,7 @@ main section ul li {
             background-color: transparent;
             border: none;
             color: $text-color;
+            font-weight: 700;
         }
     }
 }
@@ -50,6 +55,9 @@ main section ul li {
     border: 1px solid $border-color;
     padding: 1rem;
     margin-bottom: 1rem;
+    background: linear-gradient(180deg, rgba(255, 250, 240, 0.92), rgba(245, 230, 203, 0.85));
+    border-radius: $radius-md;
+    box-shadow: $shadow-soft;
 }
 .caja-map {
     border: 1px solid $border-color;
@@ -58,6 +66,8 @@ main section ul li {
     width: 100%;
     display: flex;
     justify-content: center;
+    border-radius: $radius-md;
+    background-color: rgba(255, 250, 240, 0.7);
 }
 
 // Sucursales y mapa
@@ -88,4 +98,8 @@ main section ul li {
     position: absolute;
     top: 5px;
     left: 5px;
+    background-color: rgba(14, 127, 111, 0.12);
+    color: $accent-color;
+    padding: 2px 8px;
+    border-radius: 999px;
 }

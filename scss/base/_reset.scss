@@ -1,14 +1,32 @@
+@use '../utilities/variables' as *;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arimo", sans-serif;
+    font-family: "Arimo", "Trebuchet MS", sans-serif;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: $text-color;
+    background:
+        radial-gradient(circle at 10% 8%, rgba(255, 255, 255, 0.42), transparent 35%),
+        radial-gradient(circle at 90% 0%, rgba(255, 233, 191, 0.6), transparent 30%),
+        linear-gradient(180deg, $background-body-start, $background-body-end);
+
     main {
         flex: 1;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: $primary-dark;
 }

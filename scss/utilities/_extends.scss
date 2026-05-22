@@ -4,10 +4,14 @@
 //extend de titulos en las secciones
 %titulos-section {
     color: $primary-color;
-    background-color: $secondary-color;
+    background: linear-gradient(125deg, $secondary-color, $primary-light);
     @include borde-solido(2px, $secondary-dark);
-    padding: 10px;
+    padding: 14px;
     text-align: center;
+    border-radius: $radius-md;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    box-shadow: $shadow-soft;
 }
 
 //extend para links sin estilo
@@ -21,12 +25,14 @@
     background-color: $background-light;
     border: 1px solid $border-color;
     width: 100%;
-    padding: 5px 10px;
-    transition: box-shadow $transition-duration;
+    padding: 8px 12px;
+    border-radius: $radius-sm;
+    transition: box-shadow $transition-duration, border-color $transition-duration;
 
     &:focus {
         outline: none;
-        box-shadow: 0px 0px 10px $primary-color;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba(111, 63, 27, 0.2);
     }
 }
 
@@ -50,8 +56,14 @@
 %btn {
     cursor: pointer;
     width: fit-content;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #6b737a;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: linear-gradient(145deg, #5f676f, #485058);
     color: white;
+    transition: transform $transition-duration, box-shadow $transition-duration;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 }

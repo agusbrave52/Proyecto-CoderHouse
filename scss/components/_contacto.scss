@@ -1,10 +1,14 @@
+@use 'sass:color';
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
 // Sección de contacto
 .contacto {
     padding: 3rem 1rem;
-    background-color: #f8f9fa;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255, 233, 191, 0.5), transparent 30%),
+        radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.45), transparent 35%),
+        linear-gradient(180deg, rgba(247, 236, 218, 0.8), rgba(239, 224, 199, 0.8));
 
     &-contenedor {
         max-width: 1200px;
@@ -34,10 +38,11 @@
 
 // Estilos del formulario
 .formulario-contacto {
-    background: white;
+    background: rgba(255, 250, 240, 0.96);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: $radius-md;
+    border: 1px solid rgba(172, 161, 142, 0.4);
+    box-shadow: $shadow-medium;
 
     .form-group {
         margin-bottom: 1.5rem;
@@ -59,8 +64,8 @@
         textarea {
             width: 100%;
             padding: 0.75rem;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            border: 2px solid #d6cbb8;
+            border-radius: $radius-sm;
             font-size: 1rem;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -108,7 +113,7 @@
                 text-decoration: underline;
 
                 &:hover {
-                    color: darken($primary-color, 10%);
+                    color: color.adjust($primary-color, $lightness: -10%);
                 }
             }
         }
@@ -140,11 +145,11 @@
     }
 
     .btn-enviar {
-        background-color: $primary-color;
+        background: linear-gradient(145deg, $primary-color, #8b5824);
         color: white;
 
         &:hover {
-            background-color: darken($primary-color, 10%);
+            background-color: color.adjust($primary-color, $lightness: -10%);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -155,11 +160,11 @@
     }
 
     .btn-limpiar {
-        background-color: #6c757d;
+        background: linear-gradient(145deg, #687078, #4f5861);
         color: white;
 
         &:hover {
-            background-color: darken(#6c757d, 10%);
+            background-color: color.adjust(#6c757d, $lightness: -10%);
         }
     }
 }
@@ -174,9 +179,10 @@
     .info-item {
         text-align: center;
         padding: 1.5rem;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 250, 240, 0.94);
+        border: 1px solid rgba(172, 161, 142, 0.4);
+        border-radius: $radius-md;
+        box-shadow: $shadow-soft;
 
         i {
             font-size: 3rem;

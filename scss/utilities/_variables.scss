@@ -1,26 +1,30 @@
 // Variables de colores
-$primary-color: #77531d;
-$primary-light: #fdedcf;
-$primary-medium: #f5d49a;
-$primary-dark: #42321b;
+$primary-color: #6f3f1b;
+$primary-light: #f9e8c9;
+$primary-medium: #e8be79;
+$primary-dark: #2f1d12;
+$accent-color: #0e7f6f;
 
-$secondary-color: #fce2b2;
-$secondary-dark: #c49530;
+$secondary-color: #ffe0aa;
+$secondary-dark: #b78124;
 
-$background-light: #ffeed1;
-$background-footer: #d1c0a3;
-$background-filtros: rgb(202, 202, 202);
-$background-filtros-dark: rgb(141, 141, 141);
+$background-light: #fff6e8;
+$background-footer: #ead8b4;
+$background-filtros: #efe7d8;
+$background-filtros-dark: #d8ccb8;
+$background-body-start: #f7ecda;
+$background-body-end: #efe0c7;
+$surface-color: #fffaf0;
 
-$text-color: #313131;
-$text-secondary: #504d4a;
-$text-footer: #42321b;
+$text-color: #2f2b27;
+$text-secondary: #5e554c;
+$text-footer: #2f1d12;
 
-$price-color: #278d1a;
-$price-shadow: #eeffe9;
+$price-color: #0f7c3c;
+$price-shadow: #ebffef;
 
-$border-color: #999792;
-$border-dark: #8a8372;
+$border-color: #aca18e;
+$border-dark: #746554;
 
 
 $facebook-color: #3b5998;
@@ -35,3 +39,8 @@ $image-tienda-height: 200px;
 
 $transition-duration: 0.2s;
 $transition-duration-long: 0.4s;
+$radius-sm: 10px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$shadow-soft: 0 10px 28px rgba(47, 29, 18, 0.08);
+$shadow-medium: 0 14px 34px rgba(47, 29, 18, 0.14);

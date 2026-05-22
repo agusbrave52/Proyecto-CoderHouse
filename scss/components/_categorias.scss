@@ -24,15 +24,19 @@
 
             .cat {
                 width: 32%;
-                transition: transform 0.3s ease, width 0.3s ease;
+                transition: transform 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+                border-radius: $radius-md;
+                overflow: hidden;
+                box-shadow: $shadow-soft;
                 
                 a img {
                     width: 100%;
-                    border-radius: 8px;
+                    border-radius: $radius-md;
                 }
 
                 &:hover {
                     transform: scale(1.05);
+                    box-shadow: $shadow-medium;
                 }
             }
         }
