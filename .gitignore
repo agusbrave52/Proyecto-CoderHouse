@@ -1,0 +1,37 @@
+# Python scripts de scraping y utilidades (no forman parte del proyecto)
+*.py
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Datos generados por scrapers
+hering_products.json
+
+# Dependencias
+node_modules/
+
+# SCSS source maps
+*.css.map
+*.scss.map
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
